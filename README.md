@@ -6,3 +6,6 @@ https://chrome.google.com/webstore/detail/highlight-all-on-dblclick/ibbikoelnlhp
 
 ### Added feature(s) by me:
 * Highlight on all tabs.
+* "Mouse up" event
+* Latin character
+* Middle click cancel

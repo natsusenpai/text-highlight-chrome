@@ -117,6 +117,9 @@ document.body.addEventListener('mouseup', function () {
 	}
 });
 
+document.body.addEventListener('mousedown', function (event) {
+  if (event.button === 1) removeAll();
+});
 
 function sendMsg(data) {
 	chrome.runtime.sendMessage(data, function(response) {
