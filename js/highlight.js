@@ -1,7 +1,7 @@
 // content_script
 // icon from Kütük on iconfinder.com
 
-var skip = new RegExp("^(?:HLT|SCRIPT|FORM)$");
+var skip = new RegExp("^(?:HLT|SCRIPT)$");
 var matchRegex = "";
 var script = "on";
 var word;
@@ -74,8 +74,10 @@ function removeAll() {
 function getSelectionText(text, color) {
 	var targetNode = document.body;
 	if (text.length > 1 && text.replace(/^\s+|\s+$/gm, '').length !== 0) {
-		var thisWord = text;
-		// var thisWord = text.replace(/ /g, "").replace(/[^a-zA-Z 0-9\n\r]+/g, '');
+    var thisWord = text;
+    // var thisWord = text.replace(/(\^|\$|\.|\*|\?|\(|\)|\+|\\)/ig, "\\$1");
+    // var thisWord = text.replace(/ /g, "").replace(/[^a-zA-Z 0-9\n\r]+/g, '');
+    
 		
 		if (thisWord !== '') {
 			word = thisWord;
